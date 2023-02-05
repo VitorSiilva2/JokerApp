@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:label="home"
+        tools:layout="@layout/fragment_home"
+        android:name="com.example.jokerapp.view.HomeFragment">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_joke"
+            app:destination="@id/nav_joke" />
+    </fragment>
+
+    <fragment
+        android:name="com.example.jokerapp.view.JokeFragment"
+        android:id="@+id/nav_joke"
+        tools:layout="@layout/fragment_joke"
+        >
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_joke_day"
+        android:label="about"
+        tools:layout="@layout/fragment_joke_day"
+        android:name="com.example.jokerapp.view.JokeDayFragment">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:label="menu_joker_day"
+        tools:layout="@layout/fragment_about"
+        android:name="com.example.jokerapp.view.AboutFragment">
+
+    </fragment>
+
+
+</navigation>
